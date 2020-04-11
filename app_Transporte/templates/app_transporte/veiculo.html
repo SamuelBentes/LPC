@@ -1,0 +1,26 @@
+
+<html lang='pt-br'>
+    <head>
+        <meta charset='utf-8'>
+
+        <title>Todas os Carros</title>
+    </head>
+    <body bgcolor="#F0E68C">
+        <h1>Todas os Carros</h1>
+
+        <ul>
+            {% for carro in todo_carro %}
+
+            <table>
+            <tr>
+                <td> Modelo:<a href='detalhe_carro/{{ carro.id }}'> 
+                    {{ carro.modelo }}<a/></td>
+              
+                <td>Placa: {{ carro.placa }} </td>
+            </tr>
+            </table>
+
+            {% endfor %}
+        </ul>
+    </body>
+</html>

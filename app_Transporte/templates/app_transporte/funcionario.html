@@ -1,0 +1,27 @@
+
+<html lang='pt-br'>
+    <head>
+        <meta charset='utf-8'>
+
+        <title>Todos os Funcionários</title>
+    </head>
+    <body bgcolor="#F0E68C">
+        <h1>Todos os Funcionários</h1>
+
+        <ul>
+            {% for funcionario in todo_funcionario %}
+
+            <table>
+            <tr>
+                <td> Nome:<a href='detalhe_funcionario/{{ funcionario.id }}'> 
+                    {{ funcionario.nome }}<a/></td>
+              
+                <td>Departamento: {{ funcionario.departamento.nome }} </td>
+                <td>Cargo: {{ funcionario.cargo.nome }} </td>
+            </tr>
+            </table>
+
+            {% endfor %}
+        </ul>
+    </body>
+</html>

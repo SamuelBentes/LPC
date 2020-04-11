@@ -1,0 +1,26 @@
+
+<html lang='pt-br'>
+    <head>
+        <meta charset='utf-8'>
+
+        <title>Todas as Solicitações</title>
+    </head>
+    <body bgcolor="#F0E68C">
+        <h1>Todas as Solicitações</h1>
+
+        <ul>
+            {% for solicitacao in todas_solicitacao %}
+
+            <table>
+            <tr>
+                <td> Solicitante:<a href='detalhe_solicitacao/{{ solicitacao.id }}'> 
+                    {{ solicitacao.solicitante.nome }}<a/></td>
+              
+                <td>Data e Hora: {{ solicitacao.data_hora }} </td>
+            </tr>
+            </table>
+
+            {% endfor %}
+        </ul>
+    </body>
+</html>
